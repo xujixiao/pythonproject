@@ -23,7 +23,6 @@ sentence = "这是一个句子。"
 paragraph = """这是一个段落，
 可以由多行组成"""
 
-
 # !/usr/bin/python3
 
 str = 'Runoob'
@@ -41,11 +40,15 @@ print('------------------------------')
 print('hello\nrunoob')  # 使用反斜杠(\)+n转义特殊字符
 print(r'hello\nrunoob')  # 在字符串前面添加一个 r，表示原始字符串，不会发生转义
 
-import sys; x = 'runoob'; sys.stdout.write(x + '\n')
+import sys;
+
+x = 'runoob';
+sys.stdout.write(x + '\n')
 
 import sys
+
 print('================Python import mode==========================');
-print ('命令行参数为:')
+print('命令行参数为:')
 for i in sys.argv:
-    print (i)
-print ('\n python 路径为',sys.path)
+    print(i)
+print('\n python 路径为', sys.path)

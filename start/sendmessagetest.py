@@ -7,6 +7,9 @@ from email.utils import parseaddr, formataddr
 import smtplib
 
 
+# 使用python脚本发送对应的邮件
+
+
 def _format_addr(s):
     name, addr = parseaddr(s)
     return formataddr((Header(name, 'utf-8').encode(), addr))
@@ -22,10 +25,10 @@ password = 'utmisueyjwawgchg'
 to_addr = '1375481607@qq.com'
 smtp_server = 'smtp.qq.com'
 
-msg = MIMEText('早上好，黎娜', 'plain', 'utf-8')
+msg = MIMEText('早上好', 'plain', 'utf-8')
 msg['From'] = _format_addr('Python爱好者 <%s>' % from_addr)
 msg['To'] = _format_addr('管理员 <%s>' % to_addr)
-msg['Subject'] = Header('这是徐继晓python脚本自动给你发的邮件', 'utf-8').encode()
+msg['Subject'] = Header('这是python脚本自动给你发的邮件', 'utf-8').encode()
 
 server = smtplib.SMTP(smtp_server, 25)
 server.set_debuglevel(1)
